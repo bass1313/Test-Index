@@ -6,20 +6,11 @@
     <title>Index</title>
 </head>
 <body>
-    <h1>Captured Flag </h1>
+    <h1>Captured Cookie</h1>
     <p id="cookie-display"></p>
     <script>
-        function
-        getURLParamater(name) {
-            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-            var results = regex.exec(location.search);
-            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-        }
-
-        var cookie = 
-        getURLParamater('cookie');
-        document.getElementById('cookie-display').innerText = cookie;
+        // Display the browser's cookie value
+        document.getElementById('cookie-display').innerText = document.cookie;
     </script>
 </body>
 </html>
